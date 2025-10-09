@@ -1,0 +1,9 @@
+
+
+@import "./foglaltsag.css"; /* ha közös stílusokat áthoznál */
+
+.panel { background:#c9c69a; border:1px solid #b9b68e; border-radius:4px; padding:16px; }
+.panel h3 { margin:0 0 10px; font-weight:700; color:#2b2b2b; }
+.hiba { color:#a00; }
+
+/* ha nem importálsz, másold ide a .tablazat blokkot is */

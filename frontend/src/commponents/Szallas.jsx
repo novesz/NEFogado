@@ -3,8 +3,8 @@ import React from "react";
 
 function Szallas(){
     return(
-        <div>
-                <h3>Falusi szálláshely fajtái</h3>
+        <div className="szallasdiv">
+                <h3 id="cim">Falusi szálláshely fajtái</h3>
 
                       <ul className="lists">
                         <li>Vendégszoba: a vendégek rendelkezésére bocsátható önálló lakóegység, amely egy lakóhelyiségből, és a minősítéstől függően a hozzátartozó mellékhelyiségekből áll.</li>

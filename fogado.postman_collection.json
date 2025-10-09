@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "0be56b1d-0c58-4ca1-84cc-b532570fe26f",
+		"name": "fogado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48360053",
+		"_collection_link": "https://novesz-8829019.postman.co/workspace/Eszter's-Team's-Workspace~65dd523e-be52-4b0e-8974-44a9248ffde0/collection/48360053-0be56b1d-0c58-4ca1-84cc-b532570fe26f?action=share&source=collection_link&creator=48360053"
+	},
+	"item": [
+		{
+			"name": "szobak",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "szobakAdatai",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "szobaID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

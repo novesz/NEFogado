@@ -1,11 +1,12 @@
 body{
   color: #293647;
+  
 }
 
 .bg-fej {
   background-position: center;
   height: 500px;
-  
+  margin-bottom: 20px;
 }
 
 
@@ -53,18 +54,8 @@ a {
   visibility:hidden;
 }
 
-#elsoOszlop {
-  border-right: 2px solid black;
-}
 
 
-.napraforgo{
-  background-color:  #C5C599;
-}
-
-.torpe{
-  background-color:  #C5C599;
-}
 
 .hollokoKep{
   display: block;
@@ -93,6 +84,7 @@ a {
   border: 1px black solid;
   padding: 5px;
   background-color: white;
+  
 }
 
 .elsoSzoveg{
@@ -100,3 +92,39 @@ a {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+#elsoOszlop{
+  background-color:  #C5C599
+}
+
+#harmadikOszlop{
+  background-color:  #C5C599
+}
+
+.szamlists{
+  align-items: left;
+}
+
+.torpe-yapp{
+  text-align: left;
+}
+
+.fej{
+  align-items: center;
+}
+
+
+.table table-striped{
+  text-align: left;
+  background-color: #C5C599;
+}
+
+.fo{
+  text-align: left;
+}
+
+#cim{
+  margin: 20px 5px;
+  text-align: left;
+}
+

@@ -1,0 +1,72 @@
+.panel {
+  background: #c9c69a;
+  border: 1px solid #b9b68e;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.panel h3 {
+  margin: 0 0 10px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.row-inline {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+select {
+  padding: 6px 8px;
+  border: 1px solid #b9b68e;
+  background: #fff;
+  border-radius: 4px;
+}
+
+button {
+  padding: 6px 12px;
+  border: 1px solid #7d7b58;
+  background: #d3d1a5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover { background: #e1dfb1; }
+
+.hiba { color: #a00; }
+
+/* közös táblázat stílus */
+.tablazat {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+}
+
+.tablazat thead th {
+  background: #bfbf95;
+  color: #2b2b2b;
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 2px solid #a7a36e;
+}
+
+.tablazat tbody td {
+  background: #c9c69a;
+  border: 1px solid #b9b68e;
+  padding: 6px 10px;
+}
+
+.tablazat tbody tr:nth-child(odd) td {
+  background: #d3d1a5; /* halvány csík */
+}
+
+.tablazat tbody tr:hover td {
+  background: #e1dfb1;
+  transition: .15s;
+}
