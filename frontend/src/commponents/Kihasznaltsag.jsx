@@ -4,32 +4,41 @@ import "../styles/kihasznaltsag.css";
 export default function Kihasznaltsag() {
   const [sorok, setSorok] = useState([]);
   const [hiba, setHiba] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [toltes, setToltes] = useState(false);
 
+  
   useEffect(() => {
-    (async () => {
-      try {
-        const r = await fetch("/api/rooms/utilization"); // vagy /api/rooms/utilization ha úgy hagytad
-        if (!r.ok) throw new Error("Nem sikerült betölteni a kihasználtságot.");
-        const data = await r.json();
-        setSorok(data);
-      } catch (e) {
-        setHiba(e.message);
-      } finally {
-        setLoading(false);
+  (async () => {
+    try {
+      setToltes(true);
+      setHiba("");
+      const url = "http://localhost:3001/api/rooms/utilization";
+      const r = await fetch(url);
+      if (!r.ok) {
+        const text = await r.text();
+        console.error("UTIL HTTP:", r.status, text);
+        throw new Error("Nem sikerült betölteni a kihasználtsági adatokat.");
       }
-    })();
-  }, []);
+      const data = await r.json();
+      console.log("UTIL DATA:", data);
+      setSorok(data);
+    } catch (e) {
+      setHiba(e.message || "Ismeretlen hiba.");
+    } finally {
+      setToltes(false);
+    }
+  })();
+}, []);
+
 
   return (
-    <section className="panel">
-      <h3>A Szobák kihasználtsága:</h3>
+    <section className="kih-card">
+      <h2>A Szobák kihasználtsága:</h2>
 
-      {hiba && <p className="hiba">{hiba}</p>}
-      {loading && <p>Betöltés…</p>}
+      {hiba && <p className="kih-error">{hiba}</p>}
 
-      {!loading && !hiba && (
-        <table className="tablazat">
+      <div className="kih-table-wrap">
+        <table className="kih-table">
           <thead>
             <tr>
               <th>Szoba neve</th>
@@ -38,16 +47,29 @@ export default function Kihasznaltsag() {
             </tr>
           </thead>
           <tbody>
-            {sorok.map((x) => (
-              <tr key={x.szazon ?? x.sznev}>
-                <td>{x.sznev}</td>
-                <td>{x.vendegek ?? x.osszesFo} fő</td>
-                <td>{x.vendegejszakak ?? x.osszesEjszaka} éjszaka</td>
+            {toltes && (
+              <tr>
+                <td colSpan="3" className="kih-loading">Betöltés…</td>
+              </tr>
+            )}
+
+            {!toltes && sorok.length === 0 && !hiba && (
+              <tr>
+                <td colSpan="3" className="kih-empty">Nincs megjeleníthető adat.</td>
+              </tr>
+            )}
+
+            {!toltes && sorok.map((row, i) => (
+              <tr key={row.szazon} className={i % 2 === 1 ? "kih-striped" : ""}>
+                <td>{row.sznev}</td>
+                <td>{row.osszesFo} fő</td>
+                <td>{row.osszesEjszaka} éjszaka</td>
               </tr>
             ))}
           </tbody>
         </table>
-      )}
+      </div>
     </section>
   );
+  
 }

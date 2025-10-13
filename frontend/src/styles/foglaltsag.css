@@ -1,72 +1,51 @@
-.panel {
-  background: #c9c69a;
-  border: 1px solid #b9b68e;
-  border-radius: 4px;
-  padding: 16px;
-}
-
-.panel h3 {
-  margin: 0 0 10px;
-  font-weight: 700;
-  color: #2b2b2b;
-}
-
-.label {
-  display: block;
-  margin-bottom: 6px;
-}
-
-.row-inline {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-
-select {
-  padding: 6px 8px;
-  border: 1px solid #b9b68e;
+.foglaltsag-card {
   background: #fff;
-  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 18px 20px;
+  max-width: 520px;
 }
 
-button {
-  padding: 6px 12px;
-  border: 1px solid #7d7b58;
-  background: #d3d1a5;
-  border-radius: 4px;
+.foglaltsag-card h2 {
+  margin: 0 0 14px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.foglaltsag-label {
+  display: block;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.foglaltsag-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.foglaltsag-select {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+
+.foglaltsag-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  background: #f3f3f3;
   cursor: pointer;
 }
 
-button:hover { background: #e1dfb1; }
-
-.hiba { color: #a00; }
-
-/* közös táblázat stílus */
-.tablazat {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 6px;
+.foglaltsag-btn:hover {
+  background: #eaeaea;
 }
 
-.tablazat thead th {
-  background: #bfbf95;
-  color: #2b2b2b;
-  text-align: left;
-  padding: 8px 10px;
-  border-bottom: 2px solid #a7a36e;
-}
-
-.tablazat tbody td {
-  background: #c9c69a;
-  border: 1px solid #b9b68e;
-  padding: 6px 10px;
-}
-
-.tablazat tbody tr:nth-child(odd) td {
-  background: #d3d1a5; /* halvány csík */
-}
-
-.tablazat tbody tr:hover td {
-  background: #e1dfb1;
-  transition: .15s;
+.foglaltsag-error {
+  margin-top: 10px;
+  color: #c62828;
+  font-weight: 500;
 }

@@ -1,9 +1,52 @@
+.kih-card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 18px 20px;
+}
 
+.kih-card h2 {
+  margin: 0 0 14px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
 
-@import "./foglaltsag.css"; /* ha közös stílusokat áthoznál */
+.kih-error {
+  color: #c62828;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
 
-.panel { background:#c9c69a; border:1px solid #b9b68e; border-radius:4px; padding:16px; }
-.panel h3 { margin:0 0 10px; font-weight:700; color:#2b2b2b; }
-.hiba { color:#a00; }
+.kih-table-wrap {
+  overflow-x: auto;
+}
 
-/* ha nem importálsz, másold ide a .tablazat blokkot is */
+.kih-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.kih-table thead th {
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.kih-table tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #efefef;
+  color: #333;
+}
+
+.kih-striped {
+  background: #f7f7f7;
+}
+
+.kih-loading,
+.kih-empty {
+  text-align: center;
+  color: #666;
+}
