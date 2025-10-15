@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 
+import { useEffect, useState } from "react";
 
 function Torpe() {
   const [szobak, setSzobak] = useState([]);
@@ -22,6 +22,7 @@ function Torpe() {
       {hiba ? (
         <p style={{ color: "red" }}>{hiba}</p>
       ) : (
+        
         <table  className="table table-striped">
           <thead>
             <tr>
@@ -38,8 +39,9 @@ function Torpe() {
             ))}
           </tbody>
         </table>
+        
       )}
-        <h6 className="fo">A házban összesen 21 fő fér el </h6>
+      <h6 className="fo">A házban összesen 21 fő fér el </h6>
 
       <div className="torpe-yapp">
         <h6 className="t-fel-szov">Felszereltségük:</h6>

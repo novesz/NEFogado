@@ -4,7 +4,7 @@ function Header() {
     return(
         <header className="bg-fej">
             <div className='col-12'>
-            <img src="/top.jpg" alt="fejlec" className="bg-fej" />
+                <img src="/top.jpg" alt="fejlec" className="bg-fej" />
             </div>
         </header>
     );

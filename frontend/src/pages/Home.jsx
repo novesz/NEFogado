@@ -6,6 +6,7 @@ import Torpe from '../commponents/Torpe';
 import Foglaltsag from '../commponents/Foglaltsag';
 import Kihasznaltsag from '../commponents/Kihasznaltsag';
 
+
 function Home() {
   // itt tároljuk, melyik szoba lett kiválasztva a bal oldalon
   const [kivalasztottSzoba, setKivalasztottSzoba] = useState(null);

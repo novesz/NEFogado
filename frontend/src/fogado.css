@@ -128,3 +128,16 @@ a {
   text-align: left;
 }
 
+.link{
+  text-align: left;
+}
+
+.torpe-tabla{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #afaf87;
+  text-align: left;
+  padding: 8px;
+  background-color: #a6a685;
+}
