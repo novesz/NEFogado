@@ -22,23 +22,24 @@ function Torpe() {
       {hiba ? (
         <p style={{ color: "red" }}>{hiba}</p>
       ) : (
-        
-        <table  className="table table-striped">
-          <thead>
-            <tr>
-              <th>Szoba neve</th>
-              <th>Ágyak száma</th>
-            </tr>
-          </thead>
-          <tbody>
-            {szobak.map((szoba) => (
-              <tr key={szoba.szazon}>
-                <td>{szoba.sznev}</td>
-                <td>{szoba.agy}</td>
+        <div className="torpe-tabla">
+          <table>
+            <thead>
+              <tr>
+                <th>Szoba neve</th>
+                <th>Ágyak száma</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {szobak.map((szoba) => (
+                <tr key={szoba.szazon}>
+                  <td>{szoba.sznev}</td>
+                  <td>{szoba.agy}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         
       )}
       <h6 className="fo">A házban összesen 21 fő fér el </h6>

@@ -5,7 +5,7 @@ body{
 
 .bg-fej {
   background-position: center;
-  height: 500px;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -141,3 +141,26 @@ a {
   padding: 8px;
   background-color: #a6a685;
 }
+
+.home{
+  width: 100%;
+}
+
+
+.torpe-tabla table{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.torpe-tabla td, .torpe-tabla th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+.torpe-tabla tr:nth-child(even) {
+  background-color: #C5C599;
+}
+
